@@ -18,7 +18,9 @@ function App() {
       {data.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        data.map((pokemon_data) => <PokeCard pokemon={pokemon_data} />)
+        data.map((pokemon_data) => (
+          <PokeCard key={pokemon_data.name} pokemon={pokemon_data} />
+        ))
       )}
     </>
   );
